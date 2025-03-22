@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.xml.crypto.Data;
+import java.util.Date;
 
 @Entity
 @Table(name="users")
@@ -23,7 +24,7 @@ public class Users {
     private boolean isActive;
 
     @DateTimeFormat
-    private Data registrationDate;
+    private Date registrationDate;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "userTypeId", referencedColumnName = "userTypeId")
@@ -32,7 +33,7 @@ public class Users {
     public Users() {
     }
 
-    public Users(String email, boolean isActive, String password, Data registrationDate, int userId, UsersType userTypeId) {
+    public Users(String email, boolean isActive, String password, Date registrationDate, int userId, UsersType userTypeId) {
         this.email = email;
         this.isActive = isActive;
         this.password = password;
@@ -65,11 +66,11 @@ public class Users {
         this.password = password;
     }
 
-    public Data getRegistrationDate() {
+    public Date getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(Data registrationDate) {
+    public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
     }
 

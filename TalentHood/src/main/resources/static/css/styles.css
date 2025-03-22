@@ -54,7 +54,7 @@ a.primary {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black
+  background-color: black;
 }
 .main_div {
   color: white;
@@ -184,7 +184,7 @@ ul.navbar-nav li.nav-item a {
   color: white !important;
 }
 ul.navbar-nav li.nav-item.active a {
-  color: #fb4f14 !important;
+  color: #000000 !important;
 }
 .navbar button.myBtn-light {
   margin: 0 1.25rem;
@@ -279,12 +279,13 @@ label.large-label {
   overflow: hidden;
   background-image: linear-gradient(
       to right,
-      rgba(0, 34, 68, 0.5),
-      rgba(0, 34, 68, 0.5)
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
     ),
-    url('../assets/coffee-mug.jpg');
+    url('../assets/T_Hood-removebg-preview.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-color: black;
+  background-size: 750px 750px;
   background-attachment: fixed;
 }
 
@@ -302,7 +303,7 @@ label.large-label {
   padding: 15px 10px;
   margin: 4px 0;
   line-height: 140%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 3px solid;
   border-radius: 5px;
 }
 .basic_select {
@@ -312,7 +313,7 @@ label.large-label {
 .job_Spec_box {
   padding: 5px;
   display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 3px solid ;
 }
 .top-margin {
   margin-top: 25%;
@@ -326,17 +327,17 @@ label.large-label {
   text-transform: uppercase;
 }
 .base_button {
-  background-color: #fb4f14;
+  background-color: #000000;
   border: none;
 }
 
 #check:checked::before {
-  color: #fb4f14;
-  border: #fb4f14;
+  color: #000000;
+  border: #000000;
 }
 
 .myBtn {
-  background-color: #fb4f14;
+  background-color: #000000;
   border: none;
   border-radius: 5px;
   color: white;
@@ -348,7 +349,7 @@ label.large-label {
 }
 .myBtn-light {
   box-sizing: border-box;
-  background-color: #fb4f14;
+  background-color: #000000;
   border: none;
   border-radius: 5px;
   color: white;
@@ -358,7 +359,7 @@ label.large-label {
 }
 a.color-text,
 a.color-text:hover {
-  color: #fb4f14;
+  color: #000000;
 }
 
 .btn-sec {
@@ -383,7 +384,7 @@ a.color-text:hover {
   cursor: pointer;
 }
 .btn-sec.btn-red {
-  background: #fb4f14;
+  background: #000000;
 }
 .btn-sec.btn-black {
   background: #191d34;

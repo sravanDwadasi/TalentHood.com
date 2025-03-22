@@ -1,6 +1,6 @@
-DROP DATABASE  IF EXISTS `jobportal`;
-CREATE DATABASE `jobportal`;
-USE `jobportal`;
+DROP DATABASE  IF EXISTS `talenthood`;
+CREATE DATABASE `talenthood`;
+USE `talenthood`;
 
 CREATE TABLE `users_type` (
   `user_type_id` int NOT NULL AUTO_INCREMENT,
