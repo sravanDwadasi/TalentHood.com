@@ -43,9 +43,12 @@ public class RecruiterProfileController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if(!(authentication instanceof AnonymousAuthenticationToken)){
-            String currentUserName = authentication.getName();
-            Users users = usersRepository.findByEmail(currentUserName).orElseThrow(() -> new UsernameNotFoundException(("Could not " + "find user")));
+            String currentUsername = authentication.getName();
+            Users users = usersRepository.findByEmail(currentUsername).orElseThrow(() -> new UsernameNotFoundException(("Could not " + "find user")));
             Optional<RecruiterProfile> recruiterProfile = recruiterProfileService.getOne(users.getUserId());
+
+            if(!recruiterProfile.isEmpty())
+                model.addAttribute("profile", recruiterProfile.get());
 
             recruiterProfile.ifPresent(profile -> model.addAttribute("profile", profile));
         }
@@ -57,7 +60,7 @@ public class RecruiterProfileController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if(!(authentication instanceof AnonymousAuthenticationToken)){
             String currentUserName = authentication.getName();
-            Users users = usersRepository.findByEmail(currentUserName).orElseThrow(() -> new UsernameNotFoundException(("Could not " + "find user")));
+            Users users = usersRepository.findByEmail(currentUserName).orElseThrow(() -> new UsernameNotFoundException("Could not " + "find user"));
             recruiterProfile.setUserId(users);
             recruiterProfile.setUserAccountId(users.getUserId());
         }
