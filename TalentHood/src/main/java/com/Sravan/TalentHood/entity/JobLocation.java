@@ -21,12 +21,14 @@ public class JobLocation {
     public JobLocation() {
     }
 
-    public JobLocation(String city, String country, Integer id, String state) {
+    public JobLocation(Integer id, String city,  String state, String country) {
         this.city = city;
         this.country = country;
         Id = id;
         this.state = state;
     }
+
+
 
     public String getCity() {
         return city;

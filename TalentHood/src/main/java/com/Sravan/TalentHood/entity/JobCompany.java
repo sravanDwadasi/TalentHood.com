@@ -19,7 +19,7 @@ public class JobCompany {
 
     }
 
-    public JobCompany(Integer id, String logo, String name) {
+    public JobCompany(Integer id, String name, String logo ) {
         this.id = id;
         this.logo = logo;
         this.name = name;
